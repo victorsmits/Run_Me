@@ -29,11 +29,21 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ProjectReference Include="..\Adder\Adder.csproj">
+      <Project>{9173E4B5-1668-43DC-AC5F-A49844DD2154}</Project>
+      <Name>Adder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Computer\Computer.csproj">
+      <Project>{5517B67A-44D7-43C5-BE4F-F3D1392F23E7}</Project>
+      <Name>Computer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
